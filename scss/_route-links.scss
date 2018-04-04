@@ -1,0 +1,26 @@
+.route-link {
+	height: 1.2rem;
+	margin: 0 0.4rem;
+	cursor: pointer;
+	opacity: .5;
+
+	color: #000;
+	font-size: 80%;
+	letter-spacing: .4rem;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&.mononome {
+		height: .7rem;
+		content: url(svg/logo.svg);
+	}
+
+	&.watch {
+
+	}
+}

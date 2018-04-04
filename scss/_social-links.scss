@@ -1,0 +1,29 @@
+.social-links {
+	.social-link-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+
+		.social-link {
+			display: flex;
+			list-style: none;
+
+			iframe {
+				width: 5.8rem;
+				height: 1.6rem;
+				margin-top: -3px;
+			}
+
+			a {
+			 	height: 1.2rem;
+				margin: 0 0.4rem;
+				opacity: .5;
+				align-self: center;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
