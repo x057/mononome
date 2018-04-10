@@ -5,7 +5,6 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import './index.css';
 import NavBar from './components/nav-bar';
 import TourSection from './components/tour-section';
-import WatchSection from './components/watch-section';
 import SheranAlbumSection from './components/sheran-album-section';
 
 class App extends Component {
@@ -16,9 +15,6 @@ class App extends Component {
             <div className="content">
               <ScrollableAnchor id={ 'sheran' }>
                 <SheranAlbumSection />
-              </ScrollableAnchor>
-              <ScrollableAnchor id={ 'watch' }>
-                <WatchSection />
               </ScrollableAnchor>
               <ScrollableAnchor id={ 'tour' }>
                 <TourSection />
