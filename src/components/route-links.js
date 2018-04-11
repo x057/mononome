@@ -23,6 +23,7 @@ class RouteLinks extends Component {
 					<a className="route-link tour-section" href="#tour">tour</a>
 					<a className="route-link shop-section" href="https://mononome.bandcamp.com/merch" target="_blank">shop</a>
 					<a className="route-link book-section" href="mailto:bookings@mononome.com">book</a>
+					<a className="route-link contact-section" href="mailto:contact@mononome.com">contact</a>
 				</div>
 				<ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='IL8yCSEnyv8' onClose={() => this.setState({isOpen: false})} />
 			</div>
