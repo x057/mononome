@@ -5,6 +5,10 @@
 	background-color:rgba(207, 207, 207, 0.7);
 	border-bottom: .02rem rgba(0, 0, 0, 0.5) solid;
 
+	@media (max-width: $break-small) {
+    flex-direction: column;
+  }
+
 	top: 0;
 	width: 100%;
 	position: fixed;
