@@ -1,6 +1,10 @@
 .sheran-album-section {
 	background: url('img/sheran.png') no-repeat center center;
 
+	@media (min-width: $break-small) {
+		background-size: auto 100%;
+	}
+
 	@media (max-width: $break-smaller) {
 		background: url('img/sheran-500.png') no-repeat center center;
 	}
