@@ -1,1 +1,1 @@
-mononome
+mononome's static website
