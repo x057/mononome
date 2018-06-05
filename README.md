@@ -1,1 +1,1 @@
-mononome's static website 
+mononome's static website. 
