@@ -8,7 +8,7 @@ class NavBar extends Component {
 		return (
 			<div className="nav-bar">
 				<RouteLinks />
-				<SocialLinks />
+				<SocialLinks links={this.props.socialLinks} />
 			</div>
 		);
 	}

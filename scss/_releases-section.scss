@@ -1,0 +1,56 @@
+.releases-section {
+	.releases-section-list {
+		margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+
+        margin-top: 3.3rem;
+
+		@media (max-width: $break-small) {
+			margin-top: 7.6rem;
+		}
+
+        .releases-section-list-item {
+        	margin: 1em;
+        	width: calc(25% - 2em);
+
+            @media (max-width: $break-small) {
+                width: calc(50% - 2em);
+            }
+
+            @media (max-width: $break-smaller) {
+                width: calc(100% - 2em);
+            }
+
+            .releases-section-list-item-main-link {
+                color: $text-color;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+
+                display: block;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                h5 {
+                    margin: 0;
+                    margin-bottom: 1.21em;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            .third-party-links {
+                margin-top: 0.4em;
+            }
+        }
+    }
+}
