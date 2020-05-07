@@ -1,0 +1,26 @@
+@import "../../constants.scss";
+
+.releases-section {
+    flex-direction: column;
+
+	.releases-section-list {
+		margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+
+        .releases-section-list-item {
+        	margin: 1em;
+        	width: calc(20% - 2em);
+
+            @media (max-width: $break-small) {
+                width: calc(50% - 2em);
+            }
+
+            @media (max-width: $break-smaller) {
+                width: calc(100% - 2em);
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.home-section {
+	background: no-repeat center center;
+	background-size: cover;
+
+	.social-links {
+		width: 50%;
+		font-size: .75em;
+		margin: 0 auto;
+		align-self: center;
+		text-align: center;
+
+		.social-link-list {
+			justify-content: center;
+
+			.social-link {
+				filter: invert(90%);
+			}
+		}
+	}
+}

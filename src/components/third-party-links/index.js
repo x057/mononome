@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 
+import './styles.scss';
+
 class ThirdPartyLinks extends Component {
 	renderThirdPartyLinkListItems() {
 		return _.chain(this.props.links)

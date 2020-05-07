@@ -1,0 +1,54 @@
+@import 'constants';
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  width: 100%;
+  background-color:  $theme-color;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.content {
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.social-icon {
+  &.amazon {
+    content: url(svg/social-links-amazon.svg);
+  }
+  &.apple, &.i-tunes {
+    content: url(svg/social-links-apple.svg);
+  }
+  &.bandcamp {
+    content: url(svg/social-links-bandcamp.svg);
+  }
+  &.facebook {
+    content: url(svg/social-links-facebook.svg);
+  }
+  &.instagram {
+    content: url(svg/social-links-instagram.svg);
+  }
+  &.soundcloud {
+    content: url(svg/social-links-soundcloud.svg);
+  }
+  &.spotify {
+    content: url(svg/social-links-spotify.svg);
+  }
+  &.twitter {
+    content: url(svg/social-links-twitter.svg);
+  }
+  &.youtube {
+    content: url(svg/social-links-youtube.svg);
+  }
+}

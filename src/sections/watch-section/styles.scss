@@ -1,0 +1,66 @@
+@import "../../constants.scss";
+
+.watch-section {
+    flex-direction: column;
+
+	.watch-section-list {
+		margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+
+        .watch-section-list-item {
+        	margin: 1em;
+            cursor: pointer;
+        	text-align: center;
+        	width: calc(25% - 2em);
+            color: $text-color-light;
+
+
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+
+            @media (max-width: $break-small) {
+                width: calc(50% - 2em);
+            }
+
+            @media (max-width: $break-smaller) {
+                width: calc(100% - 2em);
+            }
+
+            &:hover {
+                a {
+                    h5 {
+                        color: $text-color-lighter;
+                        background-color: rgba(0, 0, 0, 1);
+                    }
+                }
+            }
+
+            a {
+                height: 8em;
+                display: flex;
+            	color: inherit;
+                align-items: center;
+            	text-decoration: none;
+                flex-direction: column;
+                justify-content: center;
+
+            	h5 {
+            		margin: 0;
+                    width: max-content;
+                    padding: .6rem 1.2rem;
+                    color: $text-color-light;
+                    background-color: rgba(0, 0, 0, 0.75);
+
+                    &::before {
+                        content: '\25b6 \00a0 \00a0'
+                    }
+            	}
+            }
+
+        }
+    }
+}

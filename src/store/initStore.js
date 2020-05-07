@@ -13,7 +13,9 @@ export default async () => {
     const releases = getReleases(parsedEntries);
     const latestRelease = _.first(releases);
     const artist = getArtist(parsedEntries);
-    return { artist, releases, latestRelease };
+    const sections = getSections(parsedEntries);
+    const videos = getVideos(parsedEntries);
+    return { artist, releases, latestRelease, sections, videos };
   } catch (error) {
     return { error };
   }
@@ -40,5 +42,27 @@ function getArtist({items}) {
       return {id, image, about, links};
     })
     .first()
+    .valueOf();
+}
+
+function getSections({items}) {
+  return _.chain(items)
+    .filter((item) => _.get(item, 'sys.contentType.sys.id') === 'section')
+    .map(({fields}) => {
+      const backgroundImage = _.get(fields, 'backgroundImage.fields.file.url', '');
+      return _.defaults({backgroundImage}, fields);
+    })
+    .keyBy('id')
+    .valueOf();
+}
+
+function getVideos({items}) {
+  return _.chain(items)
+    .filter((item) => _.get(item, 'sys.contentType.sys.id') === 'youTubeVideo')
+    .map(({fields}) => {
+      const {id} = fields;
+      const thumbnail = _.get(fields, 'thumbnail.fields.file.url', '') || `//img.youtube.com/vi/${id}/0.jpg`;
+      return _.defaults({thumbnail}, fields);
+    })
     .valueOf();
 }
