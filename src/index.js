@@ -8,7 +8,6 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import './styles.scss';
 import { initStore } from './store';
 import NavBar from './components/nav-bar';
-import TourSection from './sections/tour-section';
 import HomeSection from './sections/home-section';
 import WatchSection from './sections/watch-section';
 import AboutSection from './sections/about-section';
