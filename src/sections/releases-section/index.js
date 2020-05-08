@@ -20,7 +20,7 @@ export class ReleasesSection extends AbstractSection {
 
     render() {
         return (
-            <div className="releases-section section">
+            <div className="releases-section section menu-offset">
                 {this.renderSectionTitle()}
               <ul className="releases-section-list">
                 {this.renderReleaseItems()}

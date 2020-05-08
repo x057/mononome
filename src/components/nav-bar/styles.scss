@@ -1,26 +1,119 @@
 @import "../../constants.scss";
 
 .nav-bar {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	background-color:rgba(207, 207, 207, 0.7);
-	border-bottom: .02rem rgba(0, 0, 0, 0.5) solid;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
 
-	@media (max-width: $break-small) {
-    flex-direction: column;
-  }
+    top: 0;
+    position: fixed;
 
-	top: 0;
-	width: 100%;
-	position: fixed;
+    padding: .5em;
+    width: calc(100% - 2*.5em);
 
-	.route-links, .social-links {
-		flex-grow: 1;
-		align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-		.route-link, .social-link {
-			vertical-align: middle;
-		}
-	}
+    .nav-bar-home {
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: space-between;
+
+    	@media (max-width: $break-small) {
+    		width: 100%;
+    	}
+    }
+
+    .nav-bar-link {
+        height: 1.2rem;
+        line-height: 1.2rem;
+        margin: 0 0.4rem;
+        cursor: pointer;
+        opacity: .5;
+
+        color: $text-color;
+        filter: invert(90%);
+        font-size: 80%;
+        letter-spacing: .4rem;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @media (max-width: $break-small) {
+            letter-spacing: .1rem;
+            font-size: 75%;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.mononome {
+            height: 1rem;
+            content: url(../../svg/logo.svg);
+
+            @media (max-width: $break-small) {
+                height: 2rem;
+                margin: 0.8rem 0;
+                flex-grow: 1;
+            }
+        }
+    }
+
+    label {
+        display: none;
+        cursor: pointer;
+
+        &:before {
+        	content: '\2630';
+        }
+
+        @media (max-width: $break-small) {
+            opacity: .5;
+            display: flex;
+            font-size: 2em;
+            margin: 0 0.8rem;
+            color: $text-color;
+            align-self: center;
+        	filter: invert(90%);
+
+        	&:hover {
+	            opacity: 1;
+	        }
+        }
+    }
+
+    #nav-items-toggle {
+        display: none;
+    }
+
+    #nav-items {
+        display: flex;
+
+        a {
+            text-decoration: none;
+            text-align: center;
+
+            @media (max-width: $break-small) {
+                box-sizing: border-box;
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: $break-small) {
+    	padding: 0;
+    	width: 100%;
+
+        flex-direction: column;
+
+        #nav-items {
+            display: none;
+        }
+
+        #nav-items-toggle:checked~#nav-items {
+            display: block;
+        }
+    }
 }

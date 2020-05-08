@@ -24,7 +24,7 @@ export class WatchSection extends AbstractSection {
 
     render() {
         return (
-            <div className="watch-section section">
+            <div className="watch-section section menu-offset">
                 {this.renderSectionTitle()}
               <ul className="watch-section-list">
                 {this.renderWatchItems()}

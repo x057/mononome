@@ -6,11 +6,13 @@
   	min-height: 100%;
   	background-repeat: no-repeat;
 
-  	margin-top: 3.3rem;
+  	&.menu-offset {
+  		padding-top: 2.25em;
 
-	@media (max-width: $break-small) {
-		margin-top: 7.6rem;
-	}
+		@media (max-width: $break-small) {
+			padding-top: 3.6rem;
+		}
+  	}
 
 	.section-title{
 		margin: 0;
@@ -19,6 +21,7 @@
 		font-style: italic;
 		font-weight: normal;
 		padding: .6rem 1.2rem;
+		max-width: max-content;
 		color: $text-color-light;
 		background-color: rgba(0, 0, 0, 0.75);
 	}
