@@ -1,5 +1,7 @@
 @import "../../constants.scss";
 
+$nav-items-toggle-label-width: 3.39rem;
+
 .nav-bar {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
@@ -40,8 +42,9 @@
         text-transform: uppercase;
 
         @media (max-width: $break-small) {
-            letter-spacing: .1rem;
+            margin: 0;
             font-size: 75%;
+            letter-spacing: .1rem;
         }
 
         &:hover {
@@ -54,8 +57,9 @@
 
             @media (max-width: $break-small) {
                 height: 2rem;
-                margin: 0.8rem 0;
                 flex-grow: 1;
+                margin: 0.8rem 0;
+                padding-left: $nav-items-toggle-label-width;
             }
         }
     }
@@ -72,10 +76,12 @@
             opacity: .5;
             display: flex;
             font-size: 2em;
-            margin: 0 0.8rem;
+            margin: 0;
             color: $text-color;
             align-self: center;
         	filter: invert(90%);
+            width: $nav-items-toggle-label-width;
+            justify-content: center;
 
         	&:hover {
 	            opacity: 1;
