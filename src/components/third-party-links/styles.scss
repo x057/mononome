@@ -1,5 +1,10 @@
-.social-links {
-	.social-link-list {
+@import "../../constants.scss";
+
+.third-party-links {
+	margin: 0;
+
+	.third-party-link-list {
+		margin: 0;
 		padding: 0;
 		display: flex;
 		flex-direction: row;
@@ -9,7 +14,7 @@
 			justify-content: center;
 		}
 
-		.social-link {
+		.third-party-link {
 			display: flex;
 			list-style: none;
 

@@ -1,0 +1,29 @@
+@import "../../constants.scss";
+
+.release {
+    background-color: $theme-color;
+
+    .release-main-link {
+        text-decoration: none;
+        color: $text-color-light;
+
+        display: block;
+
+        img {
+            width: 100%;
+        }
+
+        h5 {
+            margin: 0;
+            margin-bottom: 1.21em;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .third-party-links {
+        margin-top: 0.4em;
+        filter: invert(90%);
+    }
+}

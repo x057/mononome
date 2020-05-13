@@ -1,0 +1,39 @@
+@import "../../constants.scss";
+
+.section {
+	display: flex;
+  	min-width: 100%;
+  	min-height: 100%;
+  	background-repeat: no-repeat;
+
+  	&.menu-offset {
+  		padding-top: 2.25em;
+
+		@media (max-width: $break-small) {
+			padding-top: 3.6rem;
+		}
+  	}
+
+	.section-title{
+		margin: 0;
+		font-size: 2.4rem;
+		font-weight: bold;
+		font-style: italic;
+		font-weight: normal;
+		padding: .6rem 1.2rem;
+		max-width: max-content;
+		color: $text-color-light;
+		background-color: rgba(0, 0, 0, 0.75);
+	}
+
+	.section-text {
+		padding: .6rem 1.2rem;
+		color: $text-color-light;
+		background-color: rgba(0, 0, 0, 0.75);
+
+		a {
+			font-style: italic;
+			color: $text-color-lighter;
+		}
+	}
+}

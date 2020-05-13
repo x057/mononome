@@ -1,0 +1,125 @@
+@import "../../constants.scss";
+
+$nav-items-toggle-label-width: 3.39rem;
+
+.nav-bar {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    top: 0;
+    position: fixed;
+
+    padding: .5em;
+    width: calc(100% - 2*.5em);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .nav-bar-home {
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: space-between;
+
+    	@media (max-width: $break-small) {
+    		width: 100%;
+    	}
+    }
+
+    .nav-bar-link {
+        height: 1.2rem;
+        line-height: 1.2rem;
+        margin: 0 0.4rem;
+        cursor: pointer;
+        opacity: .5;
+
+        color: $text-color;
+        filter: invert(90%);
+        font-size: 80%;
+        letter-spacing: .4rem;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @media (max-width: $break-small) {
+            margin: 0;
+            font-size: 75%;
+            letter-spacing: .1rem;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.mononome {
+            height: 1rem;
+            content: url(../../svg/logo.svg);
+
+            @media (max-width: $break-small) {
+                height: 2rem;
+                flex-grow: 1;
+                margin: 0.8rem 0;
+                padding-left: $nav-items-toggle-label-width;
+            }
+        }
+    }
+
+    label {
+        display: none;
+        cursor: pointer;
+
+        &:before {
+        	content: '\2630';
+        }
+
+        @media (max-width: $break-small) {
+            opacity: .5;
+            display: flex;
+            font-size: 2em;
+            margin: 0;
+            color: $text-color;
+            align-self: center;
+        	filter: invert(90%);
+            width: $nav-items-toggle-label-width;
+            justify-content: center;
+
+        	&:hover {
+	            opacity: 1;
+	        }
+        }
+    }
+
+    #nav-items-toggle {
+        display: none;
+    }
+
+    #nav-items {
+        display: flex;
+
+        a {
+            text-decoration: none;
+            text-align: center;
+
+            @media (max-width: $break-small) {
+                box-sizing: border-box;
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: $break-small) {
+    	padding: 0;
+    	width: 100%;
+
+        flex-direction: column;
+
+        #nav-items {
+            display: none;
+        }
+
+        #nav-items-toggle:checked~#nav-items {
+            display: block;
+        }
+    }
+}
